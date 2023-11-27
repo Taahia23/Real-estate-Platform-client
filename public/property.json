@@ -1,0 +1,157 @@
+[
+    {
+      "propertyTitle": "Luxurious Penthouse with Panoramic Views",
+      "propertyImg": "https://i.ibb.co/RbLrS0t/p8.jpg",
+      "location": "Downtown City Center",
+      "priceRange": "$1,000,000 - $1,500,000",
+      "verificationStatus": "Verified",
+      "description": "A stunning penthouse offering breathtaking views of the city skyline. Modern amenities and spacious interiors make it an ideal urban retreat.",
+      "agentName": "John Doe",
+      "agentImg": "agent_image1.jpg",
+      "category": "popular"
+    },
+    {
+      "propertyTitle": "Cozy Family Home in Suburban Paradise",
+      "propertyImg": "https://i.ibb.co/tbnp08q/p7.jpg",
+      "location": "Green Suburbs",
+      "priceRange": "$500,000 - $600,000",
+      "verificationStatus": "Pending Verification",
+      "description": "Charming family home nestled in a quiet suburb. Close to schools, parks, and all amenities. Perfect for a growing family.",
+      "agentName": "Jane Smith",
+      "agentImg": "agent_image2.jpg",
+      "category": "popular"
+    },
+    {
+      "propertyTitle": "Modern Condo with Oceanfront Views",
+      "propertyImg": "https://i.ibb.co/tLw2NVY/p6.jpg",
+      "location": "Beachfront Paradise",
+      "priceRange": "$700,000 - $900,000",
+      "verificationStatus": "Verified",
+      "description": "Contemporary condo with direct ocean views. Enjoy the sound of waves and the convenience of beachfront living.",
+      "agentName": "Michael Johnson",
+      "agentImg": "agent_image3.jpg",
+      "category": "popular"
+    },
+    {
+      "propertyTitle": "Historic Mansion with Elegant Gardens",
+      "propertyImg": "https://i.ibb.co/BPCPVx3/p5.jpg",
+      "location": "Old Town Heritage",
+      "priceRange": "$2,000,000 - $2,500,000",
+      "verificationStatus": "Verified",
+      "description": "A piece of history! This majestic mansion boasts period details, expansive grounds, and a rich architectural legacy.",
+      "agentName": "Emily Davis",
+      "agentImg": "agent_image4.jpg",
+      "category": "popular"
+    },
+    {
+      "propertyTitle": "Sleek Urban Loft in the Heart of the Arts District",
+      "propertyImg": "https://i.ibb.co/K21ymfJ/p4.jpg",
+      "location": "Arts District",
+      "priceRange": "$600,000 - $800,000",
+      "verificationStatus": "Verified",
+      "description": "Industrial-chic loft with open spaces, exposed beams, and a creative atmosphere. Perfect for artists and trendsetters.",
+      "agentName": "Alex Turner",
+      "agentImg": "agent_image5.jpg"
+    },
+    {
+      "propertyTitle": "Mountain Retreat with Tranquil Views",
+      "propertyImg": "https://i.ibb.co/KVbFcrb/p3.jpg",
+      "location": "Serene Mountains",
+      "priceRange": "$500,000 - $700,000",
+      "verificationStatus": "Verified",
+      "description": "Escape to the mountains! This retreat offers peace and tranquility, surrounded by nature and stunning mountain views.",
+      "agentName": "Gabriel Ramirez",
+      "agentImg": "agent_image6.jpg"
+    },
+    {
+      "propertyTitle": "Eco-Friendly Smart Home with Green Features",
+      "propertyImg": "https://i.ibb.co/L6q4yHw/p2.jpg",
+      "location": "Sustainable Suburbia",
+      "priceRange": "$800,000 - $1,000,000",
+      "verificationStatus": "Verified",
+      "description": "A modern marvel! This smart home is equipped with eco-friendly features and cutting-edge technology for sustainable living.",
+      "agentName": "Sophie Anderson",
+      "agentImg": "agent_image7.jpg"
+    },
+    {
+      "propertyTitle": "Riverside Cottage with Quaint Charm",
+      "propertyImg": "https://i.ibb.co/DWv0G0L/p1.jpg",
+      "location": "Riverside Village",
+      "priceRange": "$400,000 - $500,000",
+      "verificationStatus": "Pending Verification",
+      "description": "Charming cottage by the river. A perfect retreat with a peaceful ambiance and a picturesque setting.",
+      "agentName": "Daniel Brown",
+      "agentImg": "agent_image8.jpg"
+    },
+    {
+      "propertyTitle": "Contemporary Townhouse in Trendy Neighborhood",
+      "propertyImg": "https://i.ibb.co/RbLrS0t/p8.jpg",
+      "location": "Trendy District",
+      "priceRange": "$600,000 - $900,000",
+      "verificationStatus": "Verified",
+      "description": "Sleek townhouse in the heart of a trendy neighborhood. Walk to cafes, shops, and entertainment venues.",
+      "agentName": "Olivia White",
+      "agentImg": "agent_image9.jpg"
+    },
+    {
+      "propertyTitle": "Seaside Villa with Private Beach Access",
+      "propertyImg": "https://i.ibb.co/tbnp08q/p7.jpg",
+      "location": "Seaside Retreat",
+      "priceRange": "$1,500,000 - $2,000,000",
+      "verificationStatus": "Verified",
+      "description": "Exclusive seaside villa with direct beach access. Enjoy the ultimate luxury of coastal living.",
+      "agentName": "William Turner",
+      "agentImg": "agent_image10.jpg"
+    },
+    {
+      "propertyTitle": "Art Deco Apartment in Historic Building",
+      "propertyImg": "https://i.ibb.co/tLw2NVY/p6.jpg",
+      "location": "Historic District",
+      "priceRange": "$500,000 - $700,000",
+      "verificationStatus": "Verified",
+      "description": "Step back in time! This Art Deco apartment is situated in a beautifully restored historic building with unique architectural details.",
+      "agentName": "Lily Martinez",
+      "agentImg": "agent_image11.jpg"
+    },
+    {
+      "propertyTitle": "Lakeside Retreat with Private Dock",
+      "propertyImg": "https://i.ibb.co/BPCPVx3/p5.jpg",
+      "location": "Lakeside Haven",
+      "priceRange": "$800,000 - $1,000,000",
+      "verificationStatus": "Verified",
+      "description": "Escape to the lake! This retreat offers serene lakeside living with a private dock for boating and relaxation.",
+      "agentName": "Robert Clark",
+      "agentImg": "agent_image12.jpg"
+    },
+    {
+      "propertyTitle": "Urban Oasis with Rooftop Garden",
+      "propertyImg": "https://i.ibb.co/L6q4yHw/p2.jpg",
+      "location": "City Oasis",
+      "priceRange": "$600,000 - $800,000",
+      "verificationStatus": "Verified",
+      "description": "A green paradise in the city! This urban oasis features a rooftop garden for a peaceful escape amidst the hustle and bustle.",
+      "agentName": "Eva Johnson",
+      "agentImg": "agent_image13.jpg"
+    },
+    {
+      "propertyTitle": "Colonial Style Residence in Gated Community",
+      "propertyImg": "image_url14.jpg",
+      "location": "Gated Community",
+      "priceRange": "$1,000,000 - $1,500,000",
+      "verificationStatus": "Verified",
+      "description": "Timeless elegance! This colonial-style residence is located in a prestigious gated community with top-notch security.",
+      "agentName": "Andrew Taylor",
+      "agentImg": "agent_image14.jpg"
+    },
+    {
+      "propertyTitle": "Rustic Farmhouse with Acres of Land",
+      "propertyImg": "https://i.ibb.co/K21ymfJ/p4.jpg",
+      "location": "Rural Retreat",
+      "priceRange": "$500,000 - $700,000",
+      "verificationStatus": "Verified",
+      "description": "Embrace country living! This rustic farmhouse comes with acres of land, perfect for farming or enjoying the great outdoors.",
+      "agentName": "Megan Roberts",
+      "agentImg": "agent_image15.jpg"
+    }
+  ]
+  
