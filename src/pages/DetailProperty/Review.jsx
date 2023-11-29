@@ -11,6 +11,11 @@ import { useEffect, useState } from "react";
 import SectionTitle from '../../Components/SectionTitle/SectionTitle';
 
 const Review = () => {
+
+   
+    
+
+
     const [reviews, setReviews] = useState([])
     useEffect(() => {
         fetch('http://localhost:5000/reviews')
@@ -38,12 +43,16 @@ const Review = () => {
                 }
             </Swiper>
             <div className='max-w-5xl mx-auto my-20'>
-                 <div className="join w-full">
-                <input className="input w-full input-bordered join-item" placeholder="Add Your Valuable Review" />
-                <button className="btn join-item rounded-r-full ">Submit</button>
+                <div className="join w-full">
+                    <input className="input w-full input-bordered join-item" placeholder="Add Your Valuable Review" />
+                    <button  className="btn join-item rounded-r-full ">Submit</button>
+                </div>
+
+              
             </div>
-            </div>
-           
+
+          
+
 
         </section>
     );

@@ -3,9 +3,13 @@ import { Link } from 'react-router-dom';
 import logo from '../../../assets/images/home-logo.png'
 import useAuth from '../../../hooks/useAuth';
 import useWishItem from '../../../hooks/useWishItem';
+import useAdmin from '../../../hooks/useAdmin';
+import useAgent from '../../../hooks/useAgent';
 const Navbar = () => {
     const { user, logOut } = useAuth();
     const [wish] = useWishItem()
+    const [isAdmin] = useAdmin()
+    const [isAgent] = useAgent()
 
     const handleLogOut = () => {
         logOut()
@@ -16,8 +20,21 @@ const Navbar = () => {
     const navItems = <>
         <li><Link to={'/'}>Home</Link></li>
         <li><Link to={'/allProperties'}>All Properties</Link></li>
-        <li><Link to={'/dashboard/wish'}>Dashboard {wish.length}</Link></li>
-        <li><Link to={''}></Link></li>
+
+        {
+            user && !isAdmin && !isAgent && <li><Link to={'/dashboard/wish'}>Dashboard  {wish.length}</Link></li>
+        }
+        {
+             user && isAdmin && !isAgent && <li><Link to={'/dashboard/adminProfile'}>Dashboard  {wish.length}</Link></li>
+        }
+        {
+             user && !isAdmin && isAgent && <li><Link to={'/dashboard/agentProfile'}>Dashboard  {wish.length}</Link></li>
+        }
+        
+
+
+        {/* <li><Link to={'/dashboard/wish'}>Dashboard {wish.length}</Link></li>
+        <li><Link to={''}></Link></li> */}
 
     </>
 

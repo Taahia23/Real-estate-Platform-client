@@ -1,7 +1,6 @@
 import { Link, useLoaderData } from "react-router-dom";
 import Review from "./Review";
 import useAuth from "../../hooks/useAuth";
-import axios from "axios";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import useWishItem from "../../hooks/useWishItem";

@@ -1,37 +1,16 @@
+
 import { Link } from "react-router-dom";
-import Container from "../../Components/Container/Container";
-import useProperty from "../../hooks/useProperty";
+import useMakeOffer from "../../../hooks/useMakeOffer";
 
-
-const AllProperties = () => {
-    const [property] = useProperty();
-    console.log(property);
-
-   
-
+const PropertyBought = () => {
+        const [makeOffer] = useMakeOffer()
+        console.log(makeOffer);
+       
     return (
-        <div>
-            
-
-            <Container>
-
-               
-                <div className="py-40 md:w-1/2 mx-auto ">
- {/* search button */}
-                <div>
-              
-                <div className="join">
-                            <input className="input input-bordered join-item" placeholder="Search for properties...." />
-                            <button   className="btn join-item rounded-r-full">Search</button>
-            </div>
-            </div>
-                {/* search button */}
-
-                    <h1 className="text-5xl py-5 border-y-2 border-y-blue-700 font-serif  font-bold  text-center">All Properties are here </h1>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+       
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                     {
-                        property.map(item => <div key={item._id} className="card w-72 bg-base-100 shadow-xl mb-20">
+                        makeOffer.map(item => <div key={item._id} className="card w-72 bg-base-100 shadow-xl mb-20">
                             <figure><img className="w-72 h-60" src={item.propertyImg} alt="Shoes" /></figure>
                             <div className="card-body space-y-3">
                                 <h2 className="card-title">{item.propertyTitle}</h2>
@@ -43,8 +22,9 @@ const AllProperties = () => {
                                     </div>
                                     <p>{item.agentName}</p>
                                 </div>
-                                <p>{item.location}</p>
+                                <p>{item.location}blah</p>
                                 <p>{item.priceRange}</p>
+                                <p>{item.date}</p>
                                 <p className="font-semibold text-blue-700">{item.verificationStatus}</p>
                                 <div className="">
                                     <Link to={`/detail/${item._id}`}><button className="btn btn-primary btn-block">Detail</button></Link>
@@ -53,9 +33,8 @@ const AllProperties = () => {
                         </div>)
                     }
                 </div>
-            </Container>
-        </div>
+     
     );
 };
 
-export default AllProperties;
+export default PropertyBought;

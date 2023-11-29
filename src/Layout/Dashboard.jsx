@@ -2,12 +2,14 @@ import { FaBook, FaHome, FaListAlt, FaMoneyBillAlt, FaShoppingCart, FaUser, FaUs
 import { NavLink, Outlet } from "react-router-dom";
 import useWishItem from "../hooks/useWishItem";
 import useAdmin from "../hooks/useAdmin";
+import useAgent from "../hooks/useAgent";
 
 const Dashboard = () => {
 
     const [wish] = useWishItem();
 
     const [isAdmin] = useAdmin();
+    const [isAgent] = useAgent();
 
 
     return (
@@ -29,6 +31,21 @@ const Dashboard = () => {
                                 <NavLink to={'/dashboard/manageReviews'}> <FaBook></FaBook>  Manage Reviews</NavLink>
                             </li>
 
+                        </> : isAgent ? <>
+                            <li>
+                                <NavLink to={'/dashboard/agentProfile'}><FaUser></FaUser> Agent Profile</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to={'/dashboard/addProperty'}> <FaShoppingCart></FaShoppingCart>  Add Properties</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to={'/dashboard/addedProperties'}> <FaUsers></FaUsers>  My added properties</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to={'/dashboard/soldProperties'}> <FaBook></FaBook>   My sold properties.
+                                </NavLink>
+                            </li>
+
                         </>
                             : <>
                                 <li>
@@ -41,7 +58,7 @@ const Dashboard = () => {
                                     <NavLink to={'/dashboard/propertyBought'}> <FaMoneyBillAlt></FaMoneyBillAlt>  Property bought</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to={'/dashboard/userReviews'}> <FaBook></FaBook>  My Reviews</NavLink>
+                                    <NavLink to={'/dashboard/userReview'}> <FaBook></FaBook>  My Reviews</NavLink>
                                 </li>
                             </>
                     }

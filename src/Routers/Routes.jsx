@@ -15,6 +15,14 @@ import MakeAnOffer from "../pages/Dashboard/MakeAnOffer/MakeAnOffer";
 import MyProfile from "../pages/Dashboard/MyProfile/MyProfile";
 import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
 import AdminProfile from "../pages/Dashboard/AdminProfile/AdminProfile";
+import AgentProfile from "../pages/Dashboard/AgentProfile/AgentProfile";
+import PropertyBought from "../pages/Dashboard/PropertyBought/PropertyBought";
+import MyReviews from "../pages/Dashboard/MyRevirews/MyReviews";
+import AddProperty from "../pages/Dashboard/AddProperty/AddProperty";
+import AgentRoute from "./AgentRoute";
+import AddedProperties from "../pages/Dashboard/AddedProperties/AddedProperties";
+import UpdateProperty from "../pages/Dashboard/UpdateProperty/UpdateProperty";
+import ManageProperty from "../pages/Dashboard/ManageProperty/ManageProperty";
 
 
 
@@ -43,38 +51,76 @@ export const router = createBrowserRouter([
       },
       {
         path: "/signUp",
-        element:<SignUp></SignUp>
-      } 
+        element: <SignUp></SignUp>
+      }
     ]
   },
   {
     path: 'dashboard',
     element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
     children: [
+     
       {
         path: 'wish',
-        element:<Wish></Wish>
+        element: <Wish></Wish>
       },
       {
         path: 'userProfile',
-        element:<MyProfile></MyProfile>
+        element: <MyProfile></MyProfile>
       },
-     {
+      {
+        path: 'userReview',
+        element: <MyReviews></MyReviews>
+      },
+      {
+        path: 'propertyBought',
+        element: <PropertyBought></PropertyBought>,
+        // loader : () => fetch('http://localhost:5000/makeOffer')
+      },
+      {
         path: 'makeAnOffer/:id',
         element: <MakeAnOffer></MakeAnOffer>,
-        loader : ({params}) => fetch(`http://localhost:5000/property/${params.id}`)
-    },
+        loader: ({ params }) => fetch(`http://localhost:5000/property/${params.id}`)
+      },
 
-    // admin routes
+      // admin routes
 
-    {
-      path: 'users',
-      element:<AllUsers></AllUsers>
-    },
-    {
-      path: 'adminProfile',
-      element:<AdminProfile></AdminProfile>
-    }
+      {
+        path: 'users',
+        element: <AllUsers></AllUsers>
+      },
+      {
+        path: 'adminProfile',
+        element: <AdminProfile></AdminProfile>
+      },
+      {
+        path: 'manageProperties',
+        element: <ManageProperty></ManageProperty>
+      },
+      {
+        path: 'manageReviews',
+        element: <MyReviews></MyReviews>
+      },
+      // agent routes
+      {
+        path: 'agentProfile',
+        element: <AgentProfile></AgentProfile>
+      },
+      {
+        path: 'addProperty',
+        element: <AgentRoute><AddProperty></AddProperty></AgentRoute>
+      },
+      {
+        path: 'updateProperty/:id',
+        element: <AgentRoute><UpdateProperty></UpdateProperty></AgentRoute>,
+        loader: ({params}) => fetch(`http://localhost:5000/property/${params.id}`)
+      },
+      {
+        path: 'addedProperties',
+        element: <AgentRoute><AddedProperties></AddedProperties></AgentRoute>
+      },
+
+
     ]
   }
 ]);

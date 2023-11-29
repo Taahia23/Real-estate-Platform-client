@@ -7,7 +7,8 @@ import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 const MakeAnOffer = () => {
     const singleProperty = useLoaderData();
     const { user } = useAuth()
-    const { _id, propertyTitle,verificationStatus, location, priceRange, agentName, } = singleProperty;
+    const { _id,propertyImg, propertyTitle, location, priceRange, agentName, } = singleProperty;
+    console.log(singleProperty);
 
 
 
@@ -21,7 +22,8 @@ const MakeAnOffer = () => {
         const propertyTitle = form.propertyTitle.value;
         const verificationStatus = form.verificationStatus.value;
         const date = form.date.value;
-
+        const priceRange =form.priceRange.value;
+        const propertyImg = form.propertyImg.value;
         const agentName = form.agentName.value;
         const location = form.location.value;
 
@@ -35,8 +37,9 @@ const MakeAnOffer = () => {
             propertyTitle: propertyTitle,
             agentName: agentName,
             propertyId: _id,
-            priceRange: priceRange,
+            priceRange,
             verificationStatus: verificationStatus,
+            propertyImg: propertyImg,
 
             location: location,
 
@@ -84,10 +87,10 @@ const MakeAnOffer = () => {
                             <div className="md:flex gap-5">
                                 <div className="form-control md:w-1/2 b-2 ">
 
-                                 
 
-                                        <input type="text" placeholder='Verification Status' defaultValue={verificationStatus} className='border-b-2 border-pink-700 p-3' name="verificationStatus" id="" />
-                                 
+
+                                    <input type="text" placeholder='Verification Status' value={'pending'} className='border-b-2 border-pink-700 p-3' name="verificationStatus" id="" />
+
                                 </div>
 
 
@@ -107,7 +110,7 @@ const MakeAnOffer = () => {
 
                                 <div className="form-control md:w-1/2">
 
-                                    <input type="text" placeholder='Price' className='border-b-2 border-pink-700 p-3' defaultValue={'$' + priceRange} name="priceRange" id="" />
+                                    <input type="text" placeholder={priceRange} className='border-b-2 border-pink-700 p-3' name="priceRange" id="" />
                                 </div>
                             </div>
 
@@ -136,6 +139,13 @@ const MakeAnOffer = () => {
                                 <div className="form-control md:w-1/2">
 
                                     <input type="text" placeholder='location' defaultValue={location} className='border-b-2 border-pink-700 p-3' name="location" id="" />
+
+                                </div>
+                            </div>
+                            <div>
+                                <div className="form-control md:w-full">
+
+                                    <input type="text" placeholder='location' defaultValue={propertyImg} className='border-b-2 border-pink-700 p-3' name="propertyImg" id="" />
 
                                 </div>
                             </div>

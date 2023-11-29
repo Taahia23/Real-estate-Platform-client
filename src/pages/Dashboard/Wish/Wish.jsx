@@ -64,7 +64,7 @@ const Wish = () => {
                             <p>{item.priceRange}</p>
                             <p className="font-semibold text-blue-700">{item.verificationStatus}</p>
                             <div className="">
-                                <Link to={`/dashboard/makeAnOffer/${item._id}`}><button className="btn btn-outline btn-primary mr-5">Make an Offer</button></Link>
+                                <Link to={`/dashboard/makeAnOffer/${item.propertyId}`}><button className="btn btn-outline btn-primary mr-5">Make an Offer</button></Link>
                                 <Link className="btn btn-outline btn-primary"><button onClick={()=>handleDelete(item._id)}>Remove</button></Link>
                             </div>
                         </div>

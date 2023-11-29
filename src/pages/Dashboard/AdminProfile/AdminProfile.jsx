@@ -1,9 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import userLogo from '../../../assets/images/trusted/user.png'
+import useAuth from "../../../hooks/useAuth";
 
 const AdminProfile = () => {
-    const axiosSecure = useAxiosSecure()
+    const axiosSecure = useAxiosSecure();
+    const { user } = useAuth()
 
     const { data: users = [] } = useQuery({
         queryKey: ['users'],
@@ -14,8 +16,26 @@ const AdminProfile = () => {
 
     });
     return (
-        <div >
-            <div className='flex justify-evenly my-4'>
+        <div className="space-y-5">
+            <div className="">
+
+                <div className="avatar block mb-10">
+                    <div className="w-24 block mx-auto  rounded-full text-center">
+                        <img className="" src={user?.photoURL} />
+                    </div>
+                </div>
+            </div>
+            <h2 className="text-3xl text-center">
+                <span className="text-blue-800">Hi, welcome </span>
+                {
+                    user?.displayName ? user.displayName : 'Back'
+                }
+
+            </h2>
+            <div className="text-center ">
+                <h1 className="text-2xl"> <span className="text-blue-800"> Your Role: </span>Admin</h1>
+            </div>
+            <div className='flex justify-evenly my-20'>
                 <h1 className="text-3xl">All Users</h1>
                 <h1 className="text-3xl">total: {users.length}</h1>
 
@@ -30,7 +50,7 @@ const AdminProfile = () => {
                             <th>Email</th>
                             <th>Image</th>
                             <th>Role(Agent)</th>
-                           
+
                         </tr>
                     </thead>
                     <tbody>
@@ -40,15 +60,15 @@ const AdminProfile = () => {
                                 <td>{user.name}</td>
                                 <td>{user.email}</td>
                                 <td>
-                                <div className="avatar online">
-                                <div className="w-10 h-10 rounded-full">
-                                    <img src={userLogo} />
-                                </div>
-                            </div>
-                                    
+                                    <div className="avatar online">
+                                        <div className="w-10 h-10 rounded-full">
+                                            <img src={userLogo} />
+                                        </div>
+                                    </div>
+
                                 </td>
                                 <td>
-                                {user.role === 'admin' ? "Admin" : user.role === 'agent' ?  'Agent' : 'user'  }
+                                    {user.role === 'admin' ? "Admin" : user.role === 'agent' ? 'Agent' : 'user'}
                                 </td>
                                 <td> </td>
                             </tr>)
