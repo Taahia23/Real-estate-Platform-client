@@ -43,7 +43,7 @@ export const router = createBrowserRouter([
       {
         path: "/detail/:id",
         element: <PrivateRoute><DetailProperty></DetailProperty></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/property/${params.id}`)
+        loader: ({ params }) => fetch(`https://homez-server.vercel.app/property/${params.id}`)
       },
       {
         path: "/login",
@@ -75,12 +75,12 @@ export const router = createBrowserRouter([
       {
         path: 'propertyBought',
         element: <PropertyBought></PropertyBought>,
-        // loader : () => fetch('http://localhost:5000/makeOffer')
+        // loader : () => fetch('https://homez-server.vercel.app/makeOffer')
       },
       {
         path: 'makeAnOffer/:id',
         element: <MakeAnOffer></MakeAnOffer>,
-        loader: ({ params }) => fetch(`http://localhost:5000/property/${params.id}`)
+        loader: ({ params }) => fetch(`https://homez-server.vercel.app/property/${params.id}`)
       },
 
       // admin routes
@@ -113,7 +113,7 @@ export const router = createBrowserRouter([
       {
         path: 'updateProperty/:id',
         element: <AgentRoute><UpdateProperty></UpdateProperty></AgentRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/property/${params.id}`)
+        loader: ({params}) => fetch(`https://homez-server.vercel.app/property/${params.id}`)
       },
       {
         path: 'addedProperties',

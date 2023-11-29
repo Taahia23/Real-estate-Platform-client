@@ -11,6 +11,9 @@ const Navbar = () => {
     const [isAdmin] = useAdmin()
     const [isAgent] = useAgent()
 
+    // const isAdmin = true;
+    // const isAgent = false;
+
     const handleLogOut = () => {
         logOut()
             .then(() => { })

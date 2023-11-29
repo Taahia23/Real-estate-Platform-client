@@ -48,7 +48,7 @@ const MakeAnOffer = () => {
 
         console.log(offeredProperty);
 
-        fetch('http://localhost:5000/makeOffer', {
+        fetch('https://homez-server.vercel.app/makeOffer', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

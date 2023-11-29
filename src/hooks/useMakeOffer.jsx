@@ -11,7 +11,7 @@ const useMakeOffer = () => {
 
 
     // useEffect(() => {
-    //     fetch('http://localhost:5000/makeOffer')
+    //     fetch('https://homez-server.vercel.app/makeOffer')
     //         .then(res => res.json())
     //         .then(data => {
     //             setMakeOffer(data);

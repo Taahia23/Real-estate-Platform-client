@@ -12,6 +12,7 @@ const useWishItem = () => {
     //tan stack query
     const{refetch , data: wish=[]} = useQuery({
         queryKey: ['wish', user?.email],
+        enabled: !!user?.email,
         queryFn: async () => {
             const res = await axiosSecure(`/wishes?email=${user.email}`)
             return res.data

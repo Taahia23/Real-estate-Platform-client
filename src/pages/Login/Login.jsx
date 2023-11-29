@@ -4,6 +4,7 @@ import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-s
 import Swal from "sweetalert2";
 import { AuthContext } from "../../providers/AuthProvider";
 import SocialLogin from "../../Components/SocialLogin";
+import logInlogo from '../../assets/images/property/login.png'
 
 const Login = () => {
 
@@ -13,7 +14,7 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
-    const from = location.state?.from?.pathname || '/';
+    const from = location?.state?.from?.pathname || '/';
 
     useEffect(() => {
         loadCaptchaEnginge(6);
@@ -35,12 +36,22 @@ const Login = () => {
                 const user = res.user;
                 console.log(user);
                 Swal.fire("Validation successful!");
-                navigate(from, { replace: true })
+                // navigate(from, { replace: true })
+                // navigate('/')
             })
             .then(data => {
                 console.log(data);
             })
     }
+    useEffect(()=>{
+        const unsubscribe = setInterval(()=>{
+            if(localStorage.getItem('access-token')) {
+                navigate(from, { replace: true })
+            }
+        }, 200)
+
+        return () => {clearInterval(unsubscribe)}
+    },[navigate])
 
     const handleValidateCaptcha = (e) => {
         const user_captcha_value = e.target.value;
@@ -60,8 +71,7 @@ const Login = () => {
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
-                        <h1 className="text-5xl md:w-1/2 font-bold">Login now!</h1>
-                        <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                      <img src={logInlogo} alt="" />
                     </div>
                     <div className="card  md:w-1/2 max-w-sm shadow-2xl bg-base-100">
                         <form onSubmit={handleLogin} className="card-body">
@@ -94,7 +104,7 @@ const Login = () => {
 
                             </div>
                         </form>
-                        <p>Do not have any account? please <Link to={'/signUp'}>Register</Link></p>
+                        <p className="p-10">Do not have any account? please <Link className="text-blue-700 font-bold" to={'/signUp'}>Register</Link></p>
 
                         <SocialLogin></SocialLogin>
                     </div>

@@ -11,7 +11,7 @@ const useProperty = () => {
 
 
     // useEffect(() => {
-    //     fetch('http://localhost:5000/property')
+    //     fetch('https://homez-server.vercel.app/property')
     //         .then(res => res.json())
     //         .then(data => {
     //             setProperty(data);
