@@ -113,7 +113,7 @@ export const router = createBrowserRouter([
       {
         path: 'updateProperty/:id',
         element: <AgentRoute><UpdateProperty></UpdateProperty></AgentRoute>,
-        loader: ({params}) => fetch(`https://homez-server.vercel.app/property/${params.id}`)
+        loader: ({params}) =>fetch(`https://homez-server.vercel.app/property/${params.id}`)
       },
       {
         path: 'addedProperties',
