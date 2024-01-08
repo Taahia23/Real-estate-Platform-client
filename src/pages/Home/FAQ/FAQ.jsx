@@ -32,7 +32,7 @@ const FAQ = () => {
                         Can I save properties to revisit later?
                     </div>
                     <div className="collapse-content">
-                        <p>Yes, you can create an account on our website and save your favorite properties for future reference. Simply click the "Save" button on the property listing page.</p>
+                        <p>Yes, you can create an account on our website and save your favorite properties for future reference. Simply click the Save button on the property listing page.</p>
                     </div>
                 </div>
             </div>
